@@ -13,9 +13,23 @@ resources:
 variables:
   enviromentParam: STAGE
   enviromentAbrevParam: STG
+  terraformVersion: '1.1.2'
+  resourceGroup: 'terraformRG'
+  storageAccount: 'terraformbhrpasa'
+  containerName: 'terraformbhrpcontainer'
+  key: 'terraform-tfstate'
+  serviceConnection: 'terraformfull-sc'
+  pipelineEnvironment: 'terraformenv'
 
 stages:
 - template: IaC/IaC-Pipeline-Template.yml@templates
   parameters:
     enviromentParam: ${{ variables.enviromentParam }}
     enviromentAbrevParam: ${{ variables.enviromentAbrevParam }}
+    terraformVersion: ${{ variables.enviromentAbrevParam }}
+    resourceGroup: ${{ variables.terraformVersion }}
+    storageAccount: ${{ variables.storageAccount }}
+    containerName: ${{ variables.containerName }}
+    key: ${{ variables.key }}
+    serviceConnection: ${{ variables.serviceConnection }}
+    pipelineEnvironment: ${{ variables.pipelineEnvironment }}
