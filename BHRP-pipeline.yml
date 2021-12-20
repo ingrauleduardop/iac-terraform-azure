@@ -26,8 +26,8 @@ stages:
   parameters:
     enviromentParam: ${{ variables.enviromentParam }}
     enviromentAbrevParam: ${{ variables.enviromentAbrevParam }}
-    terraformVersion: ${{ variables.enviromentAbrevParam }}
-    resourceGroup: ${{ variables.terraformVersion }}
+    terraformVersion: ${{ variables.terraformVersion }}
+    resourceGroup: ${{ variables.resourceGroup }}
     storageAccount: ${{ variables.storageAccount }}
     containerName: ${{ variables.containerName }}
     key: ${{ variables.key }}
